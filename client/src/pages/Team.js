@@ -16,7 +16,7 @@ const Team = () => {
       position: 'Managing Director',
       department: 'Management',
       email: 'preetha@gtftl.com',
-      education: 'Ph.D. in Analytical Chemistry',
+      education: 'Ph.D in Biophysics',
       experience: '15+ years in laboratory management',
       specialization: 'Laboratory Management, Quality Systems',
       bio: 'Leading expert in analytical chemistry and laboratory management with over 15 years of experience.',

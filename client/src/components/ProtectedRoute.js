@@ -21,7 +21,7 @@ const ProtectedRoute = ({ children }) => {
     }
 
     try {
-      await axios.get('/api/auth/verify', {
+      await axios.get(`${process.env.REACT_APP_API_URL || 'http://localhost:5000'}/api/auth/verify`, {
         headers: { Authorization: `Bearer ${token}` }
       });
       setIsAuthenticated(true);

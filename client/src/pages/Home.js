@@ -35,13 +35,13 @@ const Home = () => {
   const [blogRef, blogInView] = useInView({ threshold: 0.3, triggerOnce: true });
   const [contactRef, contactInView] = useInView({ threshold: 0.3, triggerOnce: true });
 
-  // Hero section images - Limited to 5 best images
+  // Hero section images
   const heroImages = [
-    '/images/IMG_20250821_132458896.jpg',
-    '/images/IMG_20250821_132516623.jpg',
-    '/images/IMG_20250821_132537634.jpg',
-    '/images/IMG_20250821_132559084.jpg',
-    '/images/IMG_20250821_132615414.jpg'
+    '/images/Hero1.jpg',
+    '/images/Hero2.jpg',
+    '/images/Hero3.jpg',
+    '/images/Hero4.jpg',
+    '/images/Hero5.jpg'
   ];
 
   // Contact form state
@@ -136,7 +136,7 @@ const Home = () => {
   const stats = [
     { value: '2022', label: 'Established' },
     { value: '1000+', label: 'Tests Completed' },
-    { value: '50+', label: 'Students Trained' },
+    { value: '400+', label: 'Students Trained' },
     { value: '100%', label: 'NABL Accredited' }
   ];
 
@@ -230,9 +230,9 @@ const Home = () => {
             className="space-y-6 md:space-y-8 py-8 md:py-0"
           >
             <div className="space-y-3 md:space-y-4">
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold leading-tight drop-shadow-lg">
-                <span className="block">Gram Tarang</span>
-                <span className="block text-yellow-300">Food Testing Lab</span>
+              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-bold leading-tight drop-shadow-lg">
+                <span className="block">Gram Tarang Food Testing</span>
+                <span className="block text-yellow-300">Laboratory Pvt. Ltd.</span>
               </h1>
               <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-100 max-w-3xl mx-auto leading-relaxed px-2 drop-shadow-md">
                 NABL-accredited analytical testing laboratory ensuring safety, quality, and innovation in food, pharmaceutical, and marine product analysis.

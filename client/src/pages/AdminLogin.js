@@ -50,7 +50,7 @@ const AdminLogin = () => {
     setLoading(true);
 
     try {
-      const response = await api.post('/api/admin/auth/login', formData);
+      const response = await api.post('/api/auth/login', formData);
       
       if (response.data.success) {
         const { admin, token } = response.data.data;
@@ -75,19 +75,26 @@ const AdminLogin = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-blue-800 to-purple-900 flex items-center justify-center p-4">
+    <div className="min-h-screen bg-gradient-to-br from-slate-800 via-purple-800 to-slate-700 flex items-center justify-center p-4 relative">
+      {/* Background Pattern */}
+      <div className="absolute inset-0 opacity-30" style={{
+        backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
+      }}></div>
+      
       {/* Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-20 left-10 w-72 h-72 bg-blue-400 bg-opacity-10 rounded-full animate-pulse"></div>
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-purple-400 bg-opacity-10 rounded-full animate-pulse" style={{ animationDelay: '-3s' }}></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-indigo-400 bg-opacity-10 rounded-full animate-pulse" style={{ animationDelay: '-1.5s' }}></div>
+        <div className="absolute top-20 left-10 w-72 h-72 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-full animate-pulse opacity-20 blur-sm"></div>
+        <div className="absolute bottom-20 right-10 w-96 h-96 bg-gradient-to-br from-red-400 to-pink-500 rounded-full animate-pulse opacity-15 blur-sm" style={{ animationDelay: '-3s' }}></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-gradient-to-br from-orange-400 to-yellow-500 rounded-full animate-pulse opacity-20 blur-sm" style={{ animationDelay: '-1.5s' }}></div>
+        <div className="absolute top-10 right-20 w-48 h-48 bg-gradient-to-br from-green-400 to-emerald-500 rounded-full animate-pulse opacity-15 blur-sm" style={{ animationDelay: '-2s' }}></div>
+        <div className="absolute bottom-10 left-20 w-56 h-56 bg-gradient-to-br from-pink-400 to-purple-500 rounded-full animate-pulse opacity-15 blur-sm" style={{ animationDelay: '-4s' }}></div>
       </div>
 
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        className="relative bg-white bg-opacity-90 rounded-3xl p-8 md:p-12 w-full max-w-md shadow-2xl border border-gray-200"
+        className="relative bg-gray-900 bg-opacity-95 rounded-3xl p-8 md:p-12 w-full max-w-md shadow-2xl border border-yellow-400 backdrop-blur-md"
       >
         {/* Header */}
         <div className="text-center mb-8">
@@ -95,7 +102,7 @@ const AdminLogin = () => {
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
             transition={{ delay: 0.2, type: "spring", stiffness: 200 }}
-            className="w-20 h-20 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-6"
+            className="w-20 h-20 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg"
           >
             <FaShieldAlt className="h-10 w-10 text-white" />
           </motion.div>
@@ -106,11 +113,11 @@ const AdminLogin = () => {
             transition={{ delay: 0.4 }}
           >
             <div className="flex items-center justify-center space-x-2 mb-2">
-              <FaFlask className="h-6 w-6 text-blue-300" />
+              <FaFlask className="h-6 w-6 text-yellow-400" />
               <h1 className="text-2xl font-bold text-white">GTFTL</h1>
             </div>
             <h2 className="text-xl font-semibold text-white mb-2">Admin Panel</h2>
-            <p className="text-blue-200">Sign in to manage the system</p>
+            <p className="text-yellow-200">Sign in to manage the system</p>
           </motion.div>
         </div>
 
@@ -129,7 +136,7 @@ const AdminLogin = () => {
             </label>
             <div className="relative">
               <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                <FaUser className="h-5 w-5 text-blue-300" />
+                <FaUser className="h-5 w-5 text-yellow-400" />
               </div>
               <input
                 type="text"
@@ -137,7 +144,7 @@ const AdminLogin = () => {
                 value={formData.username}
                 onChange={handleInputChange}
                 required
-                className="w-full pl-10 pr-4 py-3 bg-white bg-opacity-20 border border-white border-opacity-30 rounded-xl text-white placeholder-blue-200 focus:ring-2 focus:ring-blue-400 focus:border-transparent transition-all duration-200"
+                className="w-full pl-10 pr-4 py-3 bg-gray-800 border border-yellow-400 rounded-xl text-white placeholder-yellow-200 focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400 transition-all duration-200"
                 placeholder="Enter username or email"
               />
             </div>
@@ -150,7 +157,7 @@ const AdminLogin = () => {
             </label>
             <div className="relative">
               <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                <FaLock className="h-5 w-5 text-blue-300" />
+                <FaLock className="h-5 w-5 text-yellow-400" />
               </div>
               <input
                 type={showPassword ? "text" : "password"}
@@ -158,13 +165,13 @@ const AdminLogin = () => {
                 value={formData.password}
                 onChange={handleInputChange}
                 required
-                className="w-full pl-10 pr-12 py-3 bg-white bg-opacity-20 border border-white border-opacity-30 rounded-xl text-white placeholder-blue-200 focus:ring-2 focus:ring-blue-400 focus:border-transparent transition-all duration-200"
+                className="w-full pl-10 pr-12 py-3 bg-gray-800 border border-yellow-400 rounded-xl text-white placeholder-yellow-200 focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400 transition-all duration-200"
                 placeholder="Enter password"
               />
               <button
                 type="button"
                 onClick={() => setShowPassword(!showPassword)}
-                className="absolute inset-y-0 right-0 pr-3 flex items-center text-blue-300 hover:text-white transition-colors duration-200"
+                className="absolute inset-y-0 right-0 pr-3 flex items-center text-yellow-400 hover:text-yellow-300 transition-colors duration-200"
               >
                 {showPassword ? <FaEyeSlash className="h-5 w-5" /> : <FaEye className="h-5 w-5" />}
               </button>
@@ -179,8 +186,8 @@ const AdminLogin = () => {
             disabled={loading}
             className={`w-full py-3 px-4 rounded-xl font-semibold text-white transition-all duration-200 ${
               loading
-                ? 'bg-blue-500 bg-opacity-50 cursor-not-allowed'
-                : 'bg-blue-600 hover:bg-blue-700 focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-transparent'
+                ? 'bg-gradient-to-r from-yellow-500 to-orange-500 bg-opacity-50 cursor-not-allowed'
+                : 'bg-gradient-to-r from-yellow-500 to-orange-500 hover:from-yellow-600 hover:to-orange-600 focus:ring-2 focus:ring-yellow-400 focus:ring-offset-2 focus:ring-offset-transparent shadow-lg'
             }`}
           >
             {loading ? (
@@ -201,14 +208,14 @@ const AdminLogin = () => {
           transition={{ delay: 0.8 }}
           className="mt-8 text-center"
         >
-          <p className="text-blue-200 text-sm">
+          <p className="text-yellow-200 text-sm">
             Protected access for authorized personnel only
           </p>
-          <div className="mt-4 pt-4 border-t border-white border-opacity-20">
+          <div className="mt-4 pt-4 border-t border-yellow-400 border-opacity-50">
             <button
               type="button"
               onClick={() => navigate('/')}
-              className="text-blue-300 hover:text-white transition-colors duration-200 text-sm"
+              className="text-yellow-400 hover:text-yellow-300 transition-colors duration-200 text-sm font-medium"
             >
               ← Back to Website
             </button>
