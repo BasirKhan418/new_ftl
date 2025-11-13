@@ -9,93 +9,73 @@ const Team = () => {
   const [error, setError] = useState(null);
 
   // Fallback hardcoded team data
-  const fallbackBoardMembers = [
+
+
+  const fallbackTeamMembers = [
     {
       _id: '1',
       name: 'Dr. Preetha Bhadra',
       position: 'Managing Director',
       department: 'Management',
-      email: 'preetha@gtftl.com',
+      email: 'info@ftl.org.in',
       education: 'Ph.D in Biophysics',
       experience: '15+ years in laboratory management',
       specialization: 'Laboratory Management, Quality Systems',
       bio: 'Leading expert in analytical chemistry and laboratory management with over 15 years of experience.',
+      img:"/Dr.Preetha Bhadra.jpg",
       isActive: true
     },
-    {
-      _id: '2',
-      name: 'Prof. Supriya Pattanaik',
-      position: 'Director',
-      department: 'Management',
-      email: 'supriya@gtftl.com',
-      education: 'PhD (RMIT University), MPhil (NIMHANS), MA (TISS)',
-      experience: '25+ years in strategic leadership',
-      specialization: 'Strategic Leadership, Social Development',
-      bio: 'Strategic leader with extensive experience in quality systems and academic management.',
-      isActive: true
-    },
-    {
-      _id: '3',
-      name: 'Prof. D. N. Rao',
-      position: 'Director',
-      department: 'Management',
-      email: 'dnrao@gtftl.com',
-      education: 'Civil Engineering (Osmania University), PGDM (IIM Calcutta)',
-      experience: '20+ years in strategic planning',
-      specialization: 'Strategic Planning, Enterprise Development',
-      bio: 'Strategic planning expert with strong background in technology and enterprise development.',
-      isActive: true
-    }
-  ];
-
-  const fallbackTeamMembers = [
     {
       _id: '4',
       name: 'Dr. Bhadram Kalyan Chekraverthy',
       position: 'Senior Analyst',
       department: 'Chemical',
-      email: 'bhadram@gtftl.com',
+      email: 'info@ftl.org.in',
       education: 'Ph.D. Chemistry',
       experience: '10+ years in chemical analysis',
       specialization: 'Chemical Analysis, Instrumentation',
       bio: 'Expert in advanced chemical analysis and instrumental techniques.',
-      isActive: true
+      isActive: true,
+      img:"/Dr.Bhadram.jpg"
     },
     {
       _id: '5',
       name: 'Dr. Pratyush Kumar Das',
       position: 'Microbiologist',
       department: 'Biological',
-      email: 'pratyush@gtftl.com',
+      email: 'info@ftl.org.in',
       education: 'Ph.D. Microbiology',
       experience: '8+ years in microbiology',
       specialization: 'Food Microbiology, Pathogen Detection',
       bio: 'Specialist in food microbiology and pathogen detection methods.',
-      isActive: true
+      isActive: true,
+      img:"/Dr.Prathyush.jpg"
     },
     {
       _id: '6',
       name: 'Mr. Victor Pradhan',
       position: 'Chemical Analyst',
       department: 'Chemical',
-      email: 'victor@gtftl.com',
+      email: 'info@ftl.org.in',
       education: 'M.Sc. Chemistry',
       experience: '6+ years in analytical chemistry',
       specialization: 'Analytical Chemistry, Quality Control',
       bio: 'Experienced analytical chemist with focus on quality control procedures.',
-      isActive: true
+      isActive: true,
+      img:"/Mr.Victor.jpg"
     },
     {
       _id: '7',
       name: 'Ms. Debarati Nandi',
       position: 'Research Analyst',
       department: 'Chemical',
-      email: 'debarati@gtftl.com',
+      email: 'info@ftl.org.in',
       education: 'M.Sc. Chemistry',
       experience: '4+ years in research',
       specialization: 'Research Analytics, Method Development',
             bio: 'Research analyst specializing in analytical method development.',
-      isActive: true
+      isActive: true,
+      img:"/Ms.Debarati.jpg"
     }
    ];
 
@@ -113,20 +93,17 @@ const Team = () => {
           const allMembers = response.data.data;
           console.log('✅ API Success - Total members:', allMembers.length);
           
-          // Separate board members (Management) and technical team
-          const board = allMembers.filter(member => 
-            member.department === 'Management' && member.isActive
-          ).sort((a, b) => (a.displayOrder || 0) - (b.displayOrder || 0));
+       
           
           const technical = allMembers.filter(member => 
             member.department !== 'Management' && member.isActive
           ).sort((a, b) => (a.displayOrder || 0) - (b.displayOrder || 0));
           
-          console.log('Board members:', board.length);
+         
           console.log('Technical members:', technical.length);
           
           // Use real data if available, otherwise fallback
-          setBoardMembers(board.length > 0 ? board : fallbackBoardMembers);
+
           setTeamMembers(technical.length > 0 ? technical : fallbackTeamMembers);
           setError(null); // Clear any previous errors
           
@@ -145,7 +122,7 @@ const Team = () => {
         
         // After all retries failed, use fallback data
         console.log('All retries failed, using fallback data...');
-        setBoardMembers(fallbackBoardMembers);
+      
         setTeamMembers(fallbackTeamMembers);
         setError(null); // Don't show error to users, just use fallback silently
         
@@ -196,78 +173,6 @@ const Team = () => {
       </section>
 
       {/* Board of Directors */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">
-              Board of <span className="text-blue-600">Directors</span>
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Visionary leaders guiding our mission of excellence in analytical testing
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {boardMembers.map((member, index) => (
-              <div key={member._id} className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300">
-                                 <div className={`h-32 bg-gradient-to-r ${index % 3 === 0 ? 'from-blue-500 to-blue-600' : index % 3 === 1 ? 'from-green-500 to-green-600' : 'from-purple-500 to-purple-600'}`}>
-                   <div className="flex items-center justify-center h-full">
-                     <div className="w-20 h-20 bg-white rounded-full flex items-center justify-center overflow-hidden">
-                       {member.profileImage ? (
-                         <img 
-                           src={`${API_BASE_URL}${member.profileImage}`} 
-                           alt={member.name}
-                           className="w-full h-full object-cover"
-                           onError={(e) => {
-                             e.target.style.display = 'none';
-                             e.target.nextSibling.style.display = 'flex';
-                           }}
-                         />
-                       ) : null}
-                       <span 
-                         className="text-2xl font-bold text-gray-700 flex items-center justify-center w-full h-full"
-                         style={{display: member.profileImage ? 'none' : 'flex'}}
-                       >
-                         {member.name.split(' ').map(n => n[0]).join('')}
-                       </span>
-                     </div>
-                   </div>
-                 </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">{member.name}</h3>
-                  <p className="text-blue-600 font-semibold mb-4">{member.position}</p>
-                  
-                  <div className="space-y-3">
-                    <div>
-                      <div className="font-semibold text-gray-900 mb-1">Education</div>
-                      <div className="text-gray-600 text-sm">{member.education}</div>
-                    </div>
-                    <div>
-                      <div className="font-semibold text-gray-900 mb-1">Experience</div>
-                      <div className="text-gray-600 text-sm">{member.experience}</div>
-                    </div>
-                    <div>
-                      <div className="font-semibold text-gray-900 mb-1">Specialization</div>
-                      <div className="text-gray-600 text-sm">{member.specialization}</div>
-                    </div>
-                  </div>
-
-                  <p className="text-gray-600 text-sm leading-relaxed mt-4">{member.bio}</p>
-
-                  {member.email && (
-                    <div className="flex items-center space-x-2 text-sm text-blue-600 mt-4">
-                      <FaEnvelope />
-                      <a href={`mailto:${member.email}`} className="hover:underline">
-                        {member.email}
-                      </a>
-                    </div>
-                  )}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Technical Team */}
       <section className="py-20 bg-white">
@@ -287,9 +192,9 @@ const Team = () => {
                                  <div className={`h-24 bg-gradient-to-r ${member.department === 'Chemical' ? 'from-blue-400 to-blue-500' : 'from-green-400 to-green-500'}`}>
                    <div className="flex items-center justify-center h-full">
                      <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center overflow-hidden">
-                       {member.profileImage ? (
+                       {member.img ? (
                          <img 
-                           src={`${API_BASE_URL}${member.profileImage}`} 
+                           src={`${member.img}`} 
                            alt={member.name}
                            className="w-full h-full object-cover"
                            onError={(e) => {
@@ -300,7 +205,7 @@ const Team = () => {
                        ) : null}
                        <span 
                          className="text-lg font-bold text-gray-700 flex items-center justify-center w-full h-full"
-                         style={{display: member.profileImage ? 'none' : 'flex'}}
+                         style={{display: member.img ? 'none' : 'flex'}}
                        >
                          {member.name.split(' ').map(n => n[0]).join('')}
                        </span>
