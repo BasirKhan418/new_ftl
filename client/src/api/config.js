@@ -4,7 +4,7 @@ import axios from 'axios';
 // Production: Use backend subdomain, Development: Use localhost
 const API_BASE_URL = process.env.REACT_APP_API_URL || 
   (process.env.NODE_ENV === 'production' 
-    ? 'https://backend.ftl.org.in'  // Production backend URL
+    ? 'https://ftl.org.in'  // Production backend URL
     : 'http://localhost:5000');      // Development backend URL
 
 // Create axios instance with base configuration
