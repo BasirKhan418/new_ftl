@@ -9,7 +9,7 @@ const connectDB = require('./config/database');
 
 // Import route files
 const contactRoutes = require('./routes/contact');
-const internshipRoutes = require('./routes/iUnternship');
+const internshipRoutes = require('./routes/internship');
 const authRoutes = require('./routes/auth');
 const blogRoutes = require('./routes/blog');
 const serviceRequestRoutes = require('./routes/serviceRequest');
