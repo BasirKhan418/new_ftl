@@ -321,7 +321,16 @@ const Contact = () => {
               {/* Map */}
               <div className="bg-white rounded-3xl overflow-hidden shadow-lg">
                 <div className="h-64 bg-gray-200 flex items-center justify-center">
-                  <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d37182.72978433989!2d84.0712284690482!3d18.785083121047556!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sPlot%20No.1%2C%20IDCO%20Industrial%20Estate%2C%20Main%20Road%2C%20Paralakhemundi%2C%20Gajapati%2C%20Odisha%20%E2%80%93%20751200!5e1!3m2!1sen!2sin!4v1763212192159!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                  <iframe
+  src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d37182.72978433989!2d84.0712284690482!3d18.785083121047556!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sPlot%20No.1%2C%20IDCO%20Industrial%20Estate%2C%20Main%20Road%2C%20Paralakhemundi%2C%20Gajapati%2C%20Odisha%20%E2%80%93%20751200!5e1!3m2!1sen!2sin!4v1763212192159!5m2!1sen!2sin"
+  width="600"
+  height="450"
+  style={{ border: 0 }}
+  allowFullScreen=""
+  loading="lazy"
+  referrerPolicy="no-referrer-when-downgrade"
+/>
+
                 </div>
                 <div className="p-6">
                   <h4 className="font-bold text-gray-900 mb-2">Visit Our Laboratory</h4>
