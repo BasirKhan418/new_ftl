@@ -494,7 +494,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Team Section */}
+      {/* Team Section
       <section ref={teamRef} className="py-12 md:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -536,7 +536,7 @@ const Home = () => {
             </Link>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Internship Section */}
       <section ref={internshipRef} className="py-12 md:py-20 bg-gray-100">

@@ -45,7 +45,7 @@ const Navbar = () => {
     <nav className={`fixed w-full h-18 lg:h-20 z-50 transition-all duration-300 ${
       scrolled 
         ? 'bg-green-900 shadow-lg' 
-        : 'bg-transparent'
+        : 'bg-green-900 shadow-lg'
     }`}>
       <div className="max-w-7xl mx-auto px-2 sm:px-4 md:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
@@ -57,7 +57,7 @@ const Navbar = () => {
                 alt="GTFTL Logo" 
                 className="h-12 w-12 sm:h-14 sm:w-14 md:h-16 md:w-16 lg:h-18 lg:w-18 object-contain transition-all duration-300 drop-shadow-sm"
               />
-              <div className="absolute inset-0 bg-white bg-opacity-10 rounded-full blur-sm -z-10"></div>
+              
             </div>
             <div className="flex flex-col">
               <span className={`font-bold text-sm sm:text-lg leading-none ${

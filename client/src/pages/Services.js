@@ -352,10 +352,10 @@ const Services = () => {
                 <FaCheckCircle className="h-6 w-6 text-green-400" />
                 <span className="text-sm font-medium">NABL Accredited</span>
               </div>
-              <div className="flex items-center space-x-2">
+              {/* <div className="flex items-center space-x-2">
                 <FaCheckCircle className="h-6 w-6 text-yellow-400" />
                 <span className="text-sm font-medium">ISO Certified</span>
-              </div>
+              </div> */}
               <div className="flex items-center space-x-2">
                 <FaCheckCircle className="h-6 w-6 text-blue-400" />
                 <span className="text-sm font-medium">Expert Team</span>
