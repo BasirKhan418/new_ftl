@@ -22,7 +22,7 @@ const Footer = () => {
           {/* Company Info */}
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
-              <FaFlask className="h-8 w-8 text-yellow-400" />
+              <img src="/logo.png" alt="GTFTL Logo" className="h-12 w-12" />
               <div>
                 <h3 className="font-bold text-lg">GTFTL</h3>
                 <p className="text-sm text-gray-400">Food Testing Lab</p>
@@ -93,12 +93,12 @@ const Footer = () => {
               
               <div className="flex items-center space-x-3 text-sm">
                 <FaPhone className="h-4 w-4 text-yellow-400" />
-                <span className="text-gray-300">+91 XXXX-XXXXXX</span>
+                <span className="text-gray-300">+91 94387 32495</span>
               </div>
               
               <div className="flex items-center space-x-3 text-sm">
                 <FaEnvelope className="h-4 w-4 text-yellow-400" />
-                <span className="text-gray-300">info@gtftl.com</span>
+                <span className="text-gray-300">info@ftl.org.in </span>
               </div>
               
               <div className="flex items-start space-x-3 text-sm">
@@ -123,7 +123,7 @@ const Footer = () => {
                 <a href="#" className="text-gray-400 hover:text-yellow-400 transition-colors duration-200">
                   <FaLinkedin className="h-5 w-5" />
                 </a>
-                <a href="#" className="text-gray-400 hover:text-yellow-400 transition-colors duration-200">
+                <a href="https://www.instagram.com/foodtestinglaboratory_?igsh=djVrdmIwMzRnenFo" className="text-gray-400 hover:text-yellow-400 transition-colors duration-200">
                   <FaInstagram className="h-5 w-5" />
                 </a>
               </div>

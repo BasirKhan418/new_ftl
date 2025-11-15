@@ -703,7 +703,7 @@ const Home = () => {
                 </div>
                 <div>
                   <h3 className="text-lg md:text-xl font-semibold text-gray-900 mb-1 md:mb-2">Phone</h3>
-                  <p className="text-gray-600 text-sm md:text-base">+91 XXXXX XXXXX</p>
+                  <p className="text-gray-600 text-sm md:text-base">+91 94387 32495</p>
                 </div>
               </div>
               <div className="flex items-start space-x-3 md:space-x-4">
@@ -712,7 +712,7 @@ const Home = () => {
                 </div>
                 <div>
                   <h3 className="text-lg md:text-xl font-semibold text-gray-900 mb-1 md:mb-2">Email</h3>
-                  <p className="text-gray-600 text-sm md:text-base">info@gtftl.com</p>
+                  <p className="text-gray-600 text-sm md:text-base">info@ftl.org.in</p>
                 </div>
               </div>
             </motion.div>

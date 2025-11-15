@@ -44,9 +44,7 @@ const Contact = () => {
       icon: FaPhone,
       title: 'Phone Numbers',
       details: [
-        '+91 XXXX-XXXXXX (Office)',
-        '+91 XXXX-XXXXXX (Lab)',
-        '+91 XXXX-XXXXXX (Emergency)',
+        '+91 94387 32495 (Office)',
         'Available: Mon-Sat 9AM-6PM'
       ],
       color: 'text-green-600'
@@ -55,10 +53,7 @@ const Contact = () => {
       icon: FaEnvelope,
       title: 'Email Addresses',
       details: [
-        'info@gtftl.com (General)',
-        'lab@gtftl.com (Testing Services)',
-        'internship@gtftl.com (Training)',
-        'support@gtftl.com (Technical)'
+        'info@ftl.org.in (General)',
       ],
       color: 'text-purple-600'
     },
@@ -326,14 +321,7 @@ const Contact = () => {
               {/* Map */}
               <div className="bg-white rounded-3xl overflow-hidden shadow-lg">
                 <div className="h-64 bg-gray-200 flex items-center justify-center">
-                  <div className="text-center">
-                    <FaMapMarkerAlt className="h-12 w-12 text-gray-400 mx-auto mb-4" />
-                    <p className="text-gray-600 font-medium">Interactive Map</p>
-                    <p className="text-sm text-gray-500">
-                      Plot No.1, IDCO Industrial Estate<br />
-                      Paralakhemundi, Gajapati, Odisha
-                    </p>
-                  </div>
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d37182.72978433989!2d84.0712284690482!3d18.785083121047556!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sPlot%20No.1%2C%20IDCO%20Industrial%20Estate%2C%20Main%20Road%2C%20Paralakhemundi%2C%20Gajapati%2C%20Odisha%20%E2%80%93%20751200!5e1!3m2!1sen!2sin!4v1763212192159!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
                 <div className="p-6">
                   <h4 className="font-bold text-gray-900 mb-2">Visit Our Laboratory</h4>
@@ -349,7 +337,7 @@ const Contact = () => {
                 <h4 className="text-2xl font-bold text-gray-900 mb-6">Quick Actions</h4>
                 <div className="space-y-4">
                   <a
-                    href="tel:+91XXXXXXXXXX"
+                    href="tel:+919438732495"
                     className="flex items-center space-x-4 p-4 bg-green-50 rounded-xl hover:bg-green-100 transition-colors duration-200"
                   >
                     <div className="p-3 bg-green-500 rounded-full">
@@ -362,7 +350,7 @@ const Contact = () => {
                   </a>
 
                   <a
-                    href="https://wa.me/91XXXXXXXXXX"
+                    href="https://wa.link/1ny7wz"
                     className="flex items-center space-x-4 p-4 bg-green-50 rounded-xl hover:bg-green-100 transition-colors duration-200"
                   >
                     <div className="p-3 bg-green-500 rounded-full">

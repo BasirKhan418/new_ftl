@@ -35,14 +35,14 @@ const Navbar = () => {
     { path: '/services', label: 'Services', icon: FaServicestack },
     { path: '/equipment', label: 'Equipment', icon: FaCogs },
     { path: '/team', label: 'Team', icon: FaUsers },
-    { path: '/blog', label: 'Blog', icon: FaBlog },
+    // { path: '/blog', label: 'Blog', icon: FaBlog },
     { path: '/contact', label: 'Contact', icon: FaEnvelope },
   ];
 
   const isActive = (path) => location.pathname === path;
 
   return (
-    <nav className={`fixed w-full z-50 transition-all duration-300 ${
+    <nav className={`fixed w-full h-18 lg:h-20 z-50 transition-all duration-300 ${
       scrolled 
         ? 'bg-green-900 shadow-lg' 
         : 'bg-transparent'
@@ -51,11 +51,11 @@ const Navbar = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3 hover:opacity-90 transition-opacity duration-200">
-            <div className="relative">
+            <div className="relative m-2">
               <img 
-                src="/images/Logo.png" 
+                src="/logo.png" 
                 alt="GTFTL Logo" 
-                className="h-12 w-12 sm:h-14 sm:w-14 md:h-16 md:w-16 lg:h-18 lg:w-18 object-contain transition-all duration-300 drop-shadow-sm"
+                className="h-12 w-12 sm:h-14 sm:w-14 md:h-16 md:w-16 lg:h-16 lg:w-16 object-contain transition-all duration-300 drop-shadow-sm"
               />
               <div className="absolute inset-0 bg-white bg-opacity-10 rounded-full blur-sm -z-10"></div>
             </div>
