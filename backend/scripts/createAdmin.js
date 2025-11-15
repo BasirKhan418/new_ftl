@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const Admin = require('../models/Admin');
+dotenv = require('dotenv').config();
 
 const createDefaultAdmin = async () => {
   try {
@@ -26,8 +27,8 @@ const createDefaultAdmin = async () => {
     // Create default admin
     const defaultAdmin = new Admin({
       username: 'admin',
-      email: 'admin@gtftl.com',
-      password: 'admin123', // This will be hashed automatically
+      email: 'info@ftl.esse.co.in',
+      password: 'GT@Cutm_2025', // This will be hashed automatically
       role: 'super_admin'
     });
 

@@ -52,10 +52,10 @@ const Navbar = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3 hover:opacity-90 transition-opacity duration-200">
             <div className="relative m-2">
-              <img 
-                src="/logo.png" 
+             <img 
+                src="/images/Logo.png" 
                 alt="GTFTL Logo" 
-                className="h-12 w-12 sm:h-14 sm:w-14 md:h-16 md:w-16 lg:h-16 lg:w-16 object-contain transition-all duration-300 drop-shadow-sm"
+                className="h-12 w-12 sm:h-14 sm:w-14 md:h-16 md:w-16 lg:h-18 lg:w-18 object-contain transition-all duration-300 drop-shadow-sm"
               />
               <div className="absolute inset-0 bg-white bg-opacity-10 rounded-full blur-sm -z-10"></div>
             </div>

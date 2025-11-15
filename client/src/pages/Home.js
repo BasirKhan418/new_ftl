@@ -260,10 +260,10 @@ const Home = () => {
                 <FaCertificate className="h-5 w-5 md:h-6 md:w-6 text-yellow-400" />
                 <span className="text-xs md:text-sm font-medium">NABL Accredited</span>
               </div>
-              <div className="flex items-center space-x-2 bg-yellow-500 bg-opacity-20 backdrop-blur-sm px-4 py-2 rounded-full">
+              {/* <div className="flex items-center space-x-2 bg-yellow-500 bg-opacity-20 backdrop-blur-sm px-4 py-2 rounded-full">
                 <FaCheckCircle className="h-5 w-5 md:h-6 md:w-6 text-yellow-400" />
                 <span className="text-xs md:text-sm font-medium">ISO Certified</span>
-              </div>
+              </div> */}
             </div>
           </motion.div>
         </div>
@@ -288,11 +288,18 @@ const Home = () => {
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4 md:mb-6">
               About <span className="text-gradient">GTFTL</span>
             </h2>
-            <p className="text-lg md:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed px-2">
-              Established in 2022 as a NABL-accredited analytical testing laboratory, Gram Tarang Food Testing Lab 
-              serves as both a commercial testing facility and a skill development hub for students, researchers, 
-              and industry professionals.
+           <div className="flex justify-between">
+      <img 
+        src="/cutm.png" 
+        className="w-36 h-36 drop-shadow-xl object-contain"
+        alt="GTFTL Logo"
+      />
+  
+ 
+            <p className="text-lg md:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed px-2 text-left">
+             Gram Tarang Food Testing Lab, a <span className='font-bold text-red-500'>Social Entrepreneurial Outreach of Centurion University</span> established in 2022 as a NABL-accredited analytical testing laboratory. It serves as both a commercial testing facility and a skill development hub for students, researchers, and industry professionals.
             </p>
+              </div>
           </motion.div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">

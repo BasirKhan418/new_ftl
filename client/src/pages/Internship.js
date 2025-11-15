@@ -36,7 +36,7 @@ const Internship = () => {
   const programs = [
     {
       duration: '15 days',
-      price: '₹15,000',
+      price: 'Coming Soon',
       description: 'Any one instrument/facility training',
       color: 'bg-blue-500',
       popular: false,
@@ -49,7 +49,7 @@ const Internship = () => {
     },
     {
       duration: '1 Month',
-      price: '₹25,000',
+      price: 'Coming Soon',
       description: 'Comprehensive introduction to multiple techniques',
       color: 'bg-green-500',
       popular: true,
@@ -63,7 +63,7 @@ const Internship = () => {
     },
     {
       duration: '3 Months',
-      price: '₹40,000',
+      price: 'Coming Soon',
       description: 'Advanced training and research project',
       color: 'bg-purple-500',
       popular: false,
@@ -78,7 +78,7 @@ const Internship = () => {
     },
     {
       duration: '6 Months',
-      price: '₹70,000',
+      price: 'Coming Soon',
       description: 'Complete professional development program',
       color: 'bg-orange-500',
       popular: false,
@@ -388,8 +388,8 @@ const Internship = () => {
                     <h3 className="text-2xl font-bold">{program.duration}</h3>
                   </div>
                   <div className="flex items-center justify-center mb-4">
-                    <FaRupeeSign className="h-6 w-6 mr-1" />
-                    <span className="text-3xl font-bold">{program.price.replace('₹', '')}</span>
+                    {/* <FaRupeeSign className="h-6 w-6 mr-1" /> */}
+                    <span className="text-3xl font-bold">{program.price}</span>
                   </div>
                   <p className="text-white text-opacity-90">{program.description}</p>
                 </div>

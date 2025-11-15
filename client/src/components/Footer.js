@@ -22,15 +22,19 @@ const Footer = () => {
           {/* Company Info */}
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
-              <img src="/logo.png" alt="GTFTL Logo" className="h-12 w-12" />
+               <img 
+                src="/images/Logo.png" 
+                alt="GTFTL Logo" 
+                className="h-12 w-12 sm:h-14 sm:w-14 md:h-16 md:w-16 lg:h-18 lg:w-18 object-contain transition-all duration-300 drop-shadow-sm"
+            
+              />
               <div>
                 <h3 className="font-bold text-lg">GTFTL</h3>
                 <p className="text-sm text-gray-400">Food Testing Lab</p>
               </div>
             </div>
             <p className="text-gray-300 text-sm leading-relaxed">
-              NABL-accredited analytical testing laboratory specializing in food, 
-              pharmaceutical, marine products, and forensic sample analysis since 2022.
+              Gram Tarang Food Testing Lab, a Social Entrepreneurial Outreach of Centurion UniversityEstablished in 2022 as a NABL-accredited analytical testing laboratory. It serves as both a commercial testing facility and a skill development hub for students, researchers, and industry professionals.
             </p>
             <div className="flex items-center space-x-2 text-sm text-gray-300">
               <FaCertificate className="h-4 w-4 text-yellow-400" />
