@@ -109,16 +109,30 @@ app.get('/api/health', (req, res) => {
 });
 
 // Serve React build files in production
-if (process.env.NODE_ENV === 'production') {
+// Serve React build files in production
+if (NODE_ENV === 'production') {
+
+  // Serve uploads BEFORE React to avoid override
+  app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
+
+  // Serve React build
   app.use(express.static(path.join(__dirname, '../client/build')));
-  if(app.get('/uploads/*')){
-    app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
-  }
-  app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, '../client/build', 'index.html'));
+
+  // SPA fallback – ONLY for non-upload and non-api routes
+  app.get('*', (req, res) => {
+
+    // ⛔ Prevent React from overriding /uploads
+    if (req.path.startsWith('/uploads')) {
+      return res.status(404).send('File not found');
+    }
+
+    // Serve React index.html
+    return res.sendFile(path.join(__dirname, '../client/build', 'index.html'));
   });
 
 }
+
+
 
 // Error handling middleware
 app.use((err, req, res, next) => {
