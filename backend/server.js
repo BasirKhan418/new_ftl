@@ -49,7 +49,7 @@ const corsOptions = {
 
 app.use(cors(corsOptions));
 app.use(express.json());
-
+app.use('/uploads', express.static(path.join(__dirname, '../uploads')));
 // Create upload directories if they don't exist
 const uploadDirs = ['./uploads', './uploads/resumes', './uploads/blog-images', './uploads/team-images', './uploads/equipment-images', './uploads/equipment-manuals'];
 uploadDirs.forEach(dir => {
@@ -60,7 +60,7 @@ uploadDirs.forEach(dir => {
 });
 
 // Static file serving
-app.use('/uploads', express.static(path.join(__dirname, '../uploads')));
+
 app.use('/images', express.static(path.join(__dirname, '../image')));
 
 // Routes
@@ -111,10 +111,10 @@ app.get('/api/health', (req, res) => {
 // Serve React build files in production
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static(path.join(__dirname, '../client/build')));
-  
-  app.get('*', (req, res) => {
+  app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, '../client/build', 'index.html'));
   });
+
 }
 
 // Error handling middleware

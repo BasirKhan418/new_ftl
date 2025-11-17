@@ -79,7 +79,6 @@ router.get('/', optionalAuth, async (req, res) => {
       equipment = await Equipment.getByCategory(category);
     } else {
       equipment = await Equipment.find({ 
-        isActive: true, 
         isPublicDisplay: true 
       })
       .sort({ displayOrder: 1, createdAt: 1 })
